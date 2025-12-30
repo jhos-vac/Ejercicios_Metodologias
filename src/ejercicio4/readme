@@ -1,12 +1,12 @@
-# 🧪 Laboratorio 4 — Ordenamiento burbuja y búsqueda binaria
+# Laboratorio 4 — Ordenamiento burbuja y búsqueda binaria
 
-## 📌 Objetivo
+## Objetivo
 Aplicar algoritmos clásicos de **ordenamiento** y **búsqueda** utilizando
 TypeScript, reforzando el pensamiento algorítmico y el control de índices.
 
 ---
 
-## 🧩 Enunciado
+## Enunciado
 Dada una lista de números:
 
 1. Ordenar la lista utilizando el **método burbuja**
