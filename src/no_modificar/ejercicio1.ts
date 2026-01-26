@@ -26,7 +26,7 @@ function compararResultados(a: number[], b: number[]): boolean {
 }
 
 /** Runner de validación */
-function ejecutarValidacion() {
+export function ejecutarValidacion() {
   console.log("\n===== VALIDACIÓN EJERCICIO 1 =====");
 
   listasDePrueba.forEach((lista, index) => {
