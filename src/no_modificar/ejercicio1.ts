@@ -34,7 +34,7 @@ function ejecutarValidacion() {
     console.log("Entrada:", lista);
 
 
-    const resultado = productoExceptoActual(lista);
+    const resultado = productoExceptoActual({ nums: lista });
     const esperado = resultadosEsperados[index]!;
     console.log("Resultado estudiante:", resultado);
     console.log("Resultado esperado: ", esperado);
