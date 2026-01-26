@@ -16,4 +16,4 @@ Dada una cadena de texto, transformar cada carácter según las siguientes regla
 ### Ejemplo
 ```text
 Entrada:  "mundo"
-Salida:   "*)*)("
+Salida:   "*(*)("
