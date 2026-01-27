@@ -3,11 +3,20 @@ import { listasDePrueba } from "../no_modificar/ejercicio1";
 listasDePrueba;
 
 export function productoExceptoActual(nums: number[]): number[] {
-    const n = nums.length;
-    const result = new Array(n).fill(1);
+  const n = nums.length;
+  const result = new Array(n).fill(1);
 
-   // Escribir tu código aquí 
-   
-    
-    return result;
-}
+  let prefijo = 1;
+  for (let i = 0; i < n; i++) {
+    result[i] = prefijo;
+    prefijo *= nums[i]!;
+  }
+
+  let sufijo = 1;
+  for (let i = n - 1; i >= 0; i--) {
+    result[i] *= sufijo;
+    sufijo *= nums[i]!;
+  }
+
+  return result;
+}   

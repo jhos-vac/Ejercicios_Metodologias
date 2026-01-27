@@ -9,8 +9,13 @@
 export function sumaMaximaCincoNumeros(lista: number[]): number {
     let suma = 0;
 
-    // Escribir tu código aquí
 
+  const copia = [...lista];
+  copia.sort((a, b) => b - a);
+
+  for (let i = 0; i < 5; i++) {
+    suma += copia[i]!;
+  }
 
   return suma;
 }

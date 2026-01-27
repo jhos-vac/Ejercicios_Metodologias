@@ -8,8 +8,21 @@
 
 export function transformarCadena(texto: string): string {
   let resultado = "";
-    // Escribir tu código aquí
-
+for (const char of texto) {
+    const c = char.toLowerCase();
+    if (c === "m" || c === "n") {
+      resultado += "*";
+    }
+    else if ("aeiou".includes(c)) {
+      resultado += "(";
+    }
+    else if (c >= "a" && c <= "z") {
+      resultado += ")";
+    }
+    else {
+      resultado += char;
+    }
+  }
 
   return resultado;
 }
