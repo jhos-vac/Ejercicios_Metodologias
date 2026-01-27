@@ -6,7 +6,6 @@ export function productoExceptoActual(nums: number[]): number[] {
     const n = nums.length;
     const result = new Array(n).fill(1);
 
-   // Escribir tu código aquí 
       // Escribir tu código aquí  
   // Laboratorio 1 — Producto de todos excepto el actual
 
