@@ -10,25 +10,19 @@ export function transformarCadena(texto: string): string {
   let resultado = "";
     // Escribir tu código aquí
 
-   
-  for (let i = 0; i < texto.length; i++) {
-    const char = (texto[i] || "").toLowerCase();
+for (let i = 0; i < texto.length; i++) {
+  const c = texto.charAt(i).toLowerCase();
 
-    if (char === "m" || char === "n") {
-      resultado += "*";
-    } 
-    else if ("aeiou".includes(char)) {
-      resultado += "(";
-    } 
-    else if (char >= "a" && char <= "z") {
-      resultado += ")";
-    } 
-    else {
-      resultado += texto[i];
-    }
+  if(c === "m" || c === "n") {
+    resultado += "*";
+  }else if ("aeiou".includes(c)){
+    resultado += "(";
+  }else if (c >= "a" && c <= "z") {
+    resultado += ")";
+  }else{
+    resultado += texto[i];
   }
-
-  return resultado;
 }
 
-console.log(transformarCadena("mundo"));
+return resultado;
+}
