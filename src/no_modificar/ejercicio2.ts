@@ -11,7 +11,7 @@ const casosDePrueba: { entrada: string; esperado: string }[] = [
   { entrada: "mundo", esperado: "*)*)(" },
   { entrada: "MENSAJE", esperado: "*(*()((" },
   { entrada: "TypeScript", esperado: ")()*)*)()*)" },
-  { entrada: "a n m", esperado: "( * *" },
+  { entrada: "aeiou", esperado: "( * *" },
 ];
 
 /** Ejecuta validación */

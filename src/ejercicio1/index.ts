@@ -2,25 +2,23 @@ import { listasDePrueba } from "../no_modificar/ejercicio1";
 //utilizar la lista de pruebas importada
 listasDePrueba;
 
-export function productoExceptoActual({ nums }: { nums: number[]; }): number[] {
+export function productoExceptoActual(nums:  number[]): number[] {
     const n = nums.length;
-    if (n === 0) {
-        return [];
-    }
     const result = new Array(n).fill(1);
 
-
-    let prefix = 1;
-    for (let i = 0; i < n; i++) {
-        result[i] = prefix;
-        prefix *= nums[i]!;
+   // Escribir tu código aquí 
+   
+   for(let i = 0 ; i < n ; i++){
+    var producto = 1 
+    for(let j = 0 ; j < n ; j++){
+        if(i !== j ){
+            producto *= nums[j]!
     }
-
-    let suffix = 1;
-    for (let i = n - 1; i >= 0; i--) {
-        result[i] *= suffix;
-        suffix *= nums[i]!;
+     
+   }
+   result[i]=producto
+     
     }
-    
     return result;
+  
 }

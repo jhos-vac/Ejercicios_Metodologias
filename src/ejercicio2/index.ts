@@ -9,19 +9,26 @@
 export function transformarCadena(texto: string): string {
   let resultado = "";
     // Escribir tu código aquí
-    for (let char of texto) {
-        let lower = char.toLowerCase();
-        if ('aeiou'.includes(lower)) {
-            resultado += '(';
-        } else if ('mn'.includes(lower)) {
-            resultado += '*';
-        } else if (lower >= 'a' && lower <= 'z') {
-            resultado += ')';
-        } else {
-            resultado += char;
-        }
-    }
 
+   
+  for (let i = 0; i < texto.length; i++) {
+    const char = (texto[i] || "").toLowerCase();
+
+    if (char === "m" || char === "n") {
+      resultado += "*";
+    } 
+    else if ("aeiou".includes(char)) {
+      resultado += "(";
+    } 
+    else if (char >= "a" && char <= "z") {
+      resultado += ")";
+    } 
+    else {
+      resultado += texto[i];
+    }
+  }
 
   return resultado;
 }
+
+console.log(transformarCadena("mundo"));
