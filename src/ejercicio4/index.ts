@@ -9,34 +9,43 @@ export function ordenarBurbuja(lista: number[]): number[] {
   const arr = [...lista];
   const n = arr.length;
   //escribir el codigo
-  for(let i = 0; i < n - 1 ; i++){
-    for(let j = 0; j < n -1 -i; j++){
-      if(arr[j]! > arr[j + 1 ]!){
-        const temp= arr[j]!;
-        arr[j]= arr[j + 1]!;
-        arr[j+1]=temp
-      }
+
+for (let i = 0; i < n -1; i++){
+  for (let j = 0; j < n - 1 - i; j++){
+    const actual = arr[j];
+    const siguiente = arr[j + 1];
+
+    if (actual !== undefined && siguiente !== undefined && actual > siguiente) {
+      arr[j] = siguiente;
+      arr[j + 1] = actual;
     }
   }
+}  
+
   return arr;
 }
 
 export function busquedaBinaria(listaOrdenada: number[], objetivo: number): number {
   let inicio = 0;
   let fin = listaOrdenada.length - 1;
-  //escribir el codigo
-  while(inicio <= fin){
-    const medio = Math.floor((inicio + fin )/2);
 
-    if(listaOrdenada[medio] === objetivo){
-      return medio;
+  //escribir el codigo
+
+  while (inicio <= fin) {
+    const medio = Math.floor((inicio + fin) / 2);
+
+    const valor = listaOrdenada[medio];
+    if (valor === undefined){
+      return -1;
     }
-    if (listaOrdenada[medio]! < objetivo){
-      inicio = medio +1;
-    
+    if (valor === objetivo){
+      return medio;
+    }else if (valor < objetivo){
+      inicio = medio + 1;
     }else {
-      fin = medio - 1 
+      fin = medio - 1;
     }
   }
+
   return -1;
 }
