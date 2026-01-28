@@ -11,6 +11,14 @@ export function sumaMaximaCincoNumeros(lista: number[]): number {
 
     // Escribir tu código aquí
 
+const Listaordenada = [...lista].sort((a, b) => b - a);
+
+  // Suma los 5 números más grandes
+  for (let i = 0; i < 5; i++) {
+    suma += Listaordenada[i]!;
+  }
+
+
 
   return suma;
 }
