@@ -14,14 +14,11 @@ export function productoExceptoActual(nums:  number[]): number[] {
         if(i !== j ){
             producto *= nums[j]!
     }
-
-    result[i]=producto
-
      
-
    }
-   console.log(result)
-   return result;
-   
-}
+   result[i]=producto
+     
+    }
+    return result;
+  
 }
