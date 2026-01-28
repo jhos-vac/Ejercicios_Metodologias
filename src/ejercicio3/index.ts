@@ -5,12 +5,22 @@
  */
 
 
-
 export function sumaMaximaCincoNumeros(lista: number[]): number {
-    let suma = 0;
+    let suma = 0; //Inicia desde cero 
 
-    // Escribir tu código aquí
+    // Ordenamos la lista de menor a mayor
+    lista.sort((a, b) => a - b);
 
+    
+    for (let i = lista.length - 1; i >= lista.length - 5; i--) { //Recorre los ultimos 5 numeros 
+        suma = suma + lista[i]!; //Sumamos los 5 números más grandes que se ha ingresando anteriormente 
+    }
 
-  return suma;
+    // Devuelve la suma final
+    return suma;
 }
+
+
+
+
+
