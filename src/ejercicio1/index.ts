@@ -7,18 +7,15 @@ export function productoExceptoActual(nums:  number[]): number[] {
     const result = new Array(n).fill(1);
 
    // Escribir tu código aquí 
-   
-   for(let i = 0 ; i < n ; i++){
-    var producto = 1 
-    for(let j = 0 ; j < n ; j++){
-        if(i !== j ){
-            producto *= nums[j]!
-    }
-     
+   let prefijo = 1;
+   for(let i=0; i<n; i++){
+    result[i] = prefijo;
+    prefijo *= nums[i]!;
    }
-   result[i]=producto
-     
-    }
-    return result;
-  
+   let sufijo =1;
+   for(let i=n-1; i>=0; i--){
+    result[i] *= sufijo;
+    sufijo *= nums[i]!;
+   }
+   return result;
 }
