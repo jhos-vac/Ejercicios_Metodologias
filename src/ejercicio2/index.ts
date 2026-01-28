@@ -29,7 +29,7 @@ function transformarCadena(texto: string): string {
 
   return resultado;
 }
-
+console.log(transformarCadena("Manzana")); // Output: "*(*)**)"
 
   return resultado;
 }

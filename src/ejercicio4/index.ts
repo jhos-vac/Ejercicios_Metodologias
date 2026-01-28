@@ -9,6 +9,59 @@ export function ordenarBurbuja(lista: number[]): number[] {
   const arr = [...lista];
   const n = arr.length;
   //escribir el codigo
+  
+const numeros: number[] = [45, 12, 89, 23, 67, 5, 90, 34];
+const numeroBuscado: number = 23;
+
+// ORDENAMIENTO BURBUJA
+
+for (let i = 0; i < numeros.length - 1; i++) {
+  
+    for (let j = 0; j < numeros.length - 1 - i; j++) {
+
+        // Guardamos valores asegurando que NO son undefined
+        const actual: number = numeros[j]!;
+        const siguiente: number = numeros[j + 1]!;
+
+        if (actual > siguiente) {
+            numeros[j] = siguiente;
+            numeros[j + 1] = actual;
+        }
+    }
+}
+
+// BÚSQUEDA bINARIA
+
+let izquierda: number = 0;
+let derecha: number = numeros.length - 1;
+let posicion: number = -1;
+
+while (izquierda <= derecha) {
+    const medio: number = Math.floor((izquierda + derecha) / 2);
+
+    // Aseguramos que el valor existe
+    const valorMedio: number = numeros[medio]!;
+// Comparar el valor del medio con el número buscado
+    if (valorMedio === numeroBuscado) {
+        posicion = medio;
+        break;
+    }
+
+    if (valorMedio < numeroBuscado) {
+        izquierda = medio + 1;
+    } else {
+        derecha = medio - 1;
+    }
+}
+
+
+console.log("Lista ordenada:", numeros);
+// Mostrar resultado de la búsqueda
+if (posicion !== -1) {
+    console.log("Número encontrado en la posición:", posicion);
+} else {
+    console.log("Número no encontrado:", -1);
+}
 
   return arr;
 }
@@ -17,7 +70,6 @@ export function busquedaBinaria(listaOrdenada: number[], objetivo: number): numb
   let inicio = 0;
   let fin = listaOrdenada.length - 1;
 
-  //escribir el codigo
-
+  
   return -1;
 }
