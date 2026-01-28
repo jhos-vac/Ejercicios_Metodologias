@@ -13,7 +13,7 @@ export function sumaMaximaCincoNumeros(lista: number[]): number {
     const listaOrdenada = lista.sort((a, b) => b - a);
 
     for (let i = 0; i < 5; i++) {
-        suma += listaOrdenada[i];
+        suma += listaOrdenada[i]!;
     }
 
   return suma;

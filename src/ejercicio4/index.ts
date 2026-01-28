@@ -11,8 +11,8 @@ export function ordenarBurbuja(lista: number[]): number[] {
   //escribir el codigo
   for (let i = 0; i < n - 1; i++) {
     for (let j = 0; j < n - 1 - i; j++) {
-      if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      if (arr[j]! > arr[j + 1]!) {
+        [arr[j], arr[j + 1]] = [arr[j + 1]!, arr[j]!];
       }
     }
   }
@@ -26,7 +26,7 @@ export function busquedaBinaria(listaOrdenada: number[], objetivo: number): numb
 
   while (inicio <= fin) {
     const medio = Math.floor((inicio + fin) / 2);
-    const valorMedio = listaOrdenada[medio];
+    const valorMedio = listaOrdenada[medio]!;
 
     if (valorMedio === objetivo) {
       return medio; 
