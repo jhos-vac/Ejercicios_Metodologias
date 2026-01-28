@@ -9,8 +9,6 @@ export function productoExceptoActual(nums: number[]): number[] {
     }
     const result = new Array(n).fill(1);
 
-   // Escribir tu código aquí 
-   
     // Escribir tu código aquí
     // Método optimizado O(n) con prefijos y sufijos
 

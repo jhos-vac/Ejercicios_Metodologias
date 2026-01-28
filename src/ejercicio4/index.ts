@@ -9,7 +9,6 @@ export function ordenarBurbuja(lista: number[]): number[] {
   const arr = [...lista];
   const n = arr.length;
   //escribir el codigo
-
   for (let i = 0; i < n - 1; i++) {
     for (let j = 0; j < n - 1 - i; j++) {
       if (arr[j]! > arr[j + 1]!) {
