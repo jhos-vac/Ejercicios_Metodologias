@@ -8,6 +8,7 @@
 
 export function transformarCadena(texto: string): string {
   let resultado = "";
+
     // Escribir tu código aquí
     for (let char of texto) {
         let lower = char.toLowerCase();
@@ -22,6 +23,22 @@ export function transformarCadena(texto: string): string {
         }
     }
 
+  for (const letra of texto.toLowerCase()) {
+    if ("aeiou".includes(letra)) {
+      resultado += "(";
+    } else if (letra === "m" || letra === "n") {
+      resultado += "*";
+    } else if (letra >= "a" && letra <= "z") {
+      resultado += ")";
+    }
+  }
 
   return resultado;
+
 }
+
+
+console.log(transformarCadena("manzana"));
+
+
+

@@ -8,6 +8,17 @@ export function productoExceptoActual(nums: number[]): number[] {
 
    // Escribir tu código aquí  
    
-    
-    return result;
+  let izquierda = 1;
+  for (let i = 0; i < n; i++) {
+    result[i] = izquierda;
+    izquierda *= nums[i]!;
+  }
+
+  let derecha = 1;
+  for (let i = n - 1; i >= 0; i--) {
+    result[i] *= derecha;
+    derecha *= nums[i]!;
+  }
+
+  return result;
 }
