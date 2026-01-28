@@ -10,17 +10,14 @@ export function sumaMaximaCincoNumeros(lista: number[]): number {
     let suma = 0;
 
     // Escribir tu código aquí
-    lista.sort((a , b)=> a - b);
 
-    for(let i = lista.length - 5 ; i < lista.length; i++){
+    lista.sort((a, b) => b - a);
 
-    suma += lista[i]!;
+    for (let i = 0; i < 5; i++){
+      const valor = lista[i];
+      if(valor !== undefined)
+      suma += valor;
     }
-    
 
-  return suma;
+    return suma;
 }
-
-console.log(
-  sumaMaximaCincoNumeros([7,2,5,4,9,0,13,54,12,10,111,3,19,6,15]) //212
-); 
