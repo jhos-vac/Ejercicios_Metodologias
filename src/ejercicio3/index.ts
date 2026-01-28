@@ -4,13 +4,15 @@
  * hallar la suma más alta posible tomando solo 5 números.
  */
 
-
-
 export function sumaMaximaCincoNumeros(lista: number[]): number {
-    let suma = 0;
+  const copia = [...lista];
 
-    // Escribir tu código aquí
+  copia.sort((a, b) => b - a);
 
+  let suma = 0;
+  for (let i = 0; i < 5; i++) {
+    suma += copia[i]!;
+  }
 
   return suma;
 }
