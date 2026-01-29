@@ -7,14 +7,14 @@ listasDePrueba;
 // '(nums: number[])': Define que el parámetro de entrada 'nums' debe ser una lista de números.
 // ': number[]': Indica que la función devolverá (return) una lista de números al final.
 export function productoExceptoActual(nums: number[]): number[] {
-    
-    // 'const': Define una variable constante (su referencia no cambiará).
-    // 'nums.length': Propiedad que nos dice cuántos elementos tiene la lista.
+
+    // 'const': Define una variable constante 
+    // 'nums.length nos dice cuántos elementos tiene la lista.
     const n = nums.length;
     
-    // 'new Array(n)': Crea una lista vacía con 'n' espacios huecos.
-    // '.fill(1)': Rellena todos esos espacios con el número 1.
-    // Se usa 1 porque es el elemento neutro de la multiplicación (x * 1 = x).
+    // 'new Array(n)Crea una lista vacía con 'n' espacios 
+    // '.fill(1) Rellena todos esos espacios con el número 1.
+
     const result = new Array(n).fill(1);
 
     // --- 1. VALIDACIÓN ---
@@ -23,33 +23,31 @@ export function productoExceptoActual(nums: number[]): number[] {
     // 'i++': Incrementa 'i' en 1 al final de cada vuelta.
     for (let i = 0; i < n; i++) {
         
-        // 'typeof': Operador que devuelve un texto indicando el tipo de dato (ej: "string", "number").
+        // 'typeof': Operador que devuelve un texto indicando el tipo de dato
         // '!==': Comparación estricta que significa "NO es igual a".
         if (typeof nums[i] !== 'number') {
-            // 'throw new Error': Detiene el programa inmediatamente y lanza un mensaje de error.
+        
             throw new Error("La lista debe contener solo números."); 
         }
     }
-
-    // --- 2. CÁLCULO OPTIMIZADO (Sin usar división) ---
+//Caso 2
     
-    // Paso A: Barrido de Izquierda a Derecha
+    // Paso A Barrido de Izquierda a Derecha
     // 'let': Define una variable que cambiará de valor durante el tiempo.
     // Esta variable acumulará el producto de los números vistos hasta el momento desde la izquierda.
     let izquierda = 1; 
     
     for (let i = 0; i < n; i++) {
         // En la posición actual del resultado, guardamos el acumulado 'izquierda'.
-        // Esto significa: "El producto de todos los números ANTES de mí".
+        // Esto significa: "El producto de todos los números".
         result[i] = izquierda; 
         
         // Actualizamos el acumulador multiplicándolo por el número actual de la lista original.
-        // El símbolo '!': (Aserción no nula) Le dice a TypeScript "Confía en mí, nums[i] existe y no es nulo/undefined".
+        // El símbolo '!' Le dice a TypeScript "Confía en mí, nums[i] existe y no es nulo/undefined".
         izquierda = izquierda * nums[i]!; 
     }
 
-    // Paso B: Barrido de Derecha a Izquierda
-    // Reiniciamos un acumulador, ahora para calcular el producto desde el final.
+    // Reiniciamos un acumulador ahora para calcular el producto desde el final.
     let derecha = 1;
 
     // 'i = n - 1': Empezamos el contador en el último índice de la lista.
