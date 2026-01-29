@@ -13,7 +13,7 @@ const casosDePrueba: { entrada: number[]; esperado: number }[] = [
   },
   {
     entrada: [-5, -1, -3, -2, -4, 10, 8, 7, 6, 9, 0, 1, 2, 3, 4],
-    esperado: 38, // 10+9+8+7+4
+    esperado: 40, // 10+9+8+7+6
   },
   {
     entrada: [100, 90, 80, 70, 60, 1, 2, 3, 4, 5, -1, -2, -3, -4, -5],

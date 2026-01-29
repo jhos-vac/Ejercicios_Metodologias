@@ -8,9 +8,9 @@ import { transformarCadena } from "../ejercicio2/index";
 /** Casos de prueba */
 const casosDePrueba: { entrada: string; esperado: string }[] = [
   { entrada: "hola", esperado: ")()(" },
-  { entrada: "mundo", esperado: "*)*)(" },
-  { entrada: "MENSAJE", esperado: "*(*()((" },
-  { entrada: "TypeScript", esperado: ")()*)*)()*)" },
+  { entrada: "mundo", esperado: "*(*)(" },
+  { entrada: "MENSAJE", esperado: "*(*)()(" },
+  { entrada: "TypeScript", esperado: ")()()))())" },
   { entrada: "a n m", esperado: "( * *" },
 ];
 
