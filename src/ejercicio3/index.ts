@@ -11,7 +11,9 @@ export function sumaMaximaCincoNumeros(lista: number[]): number {
     let suma = 0;
 
     // Escribir tu código aquí
+// Laboratorio 3 — Suma máxima de cinco números
 
+// Lista de números de ejemplo
 const numeros: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
 // Ordenamos de mayor a menor
