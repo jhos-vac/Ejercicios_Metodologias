@@ -11,7 +11,7 @@ export function transformarCadena(texto: string): string {
     // Escribir tu código aquí
 
 for (let i = 0; i < texto.length; i++) { //bucle que recorre la cadena de texto caracter por caracter
-  const c = texto.charAt(i).toLowerCase(); //texto puede ser undefines; por eso se usa chartAt que siempre devuelve un string
+  const c = texto.charAt(i).toLowerCase(); //texto puede ser undefined; por eso se usa chartAt que siempre devuelve un string
                             //toLowerCase convierte los caracteres en minúscula
                             //se define una variable constante c
 
