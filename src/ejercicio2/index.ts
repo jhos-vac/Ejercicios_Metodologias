@@ -11,7 +11,7 @@ export function transformarCadena(texto: string): string {
     // Escribir tu código aquí
     
 for (let i = 0; i < texto.length; i++) {
-  const char = String(texto[i]); // fuerza a string
+  const char = String(texto[i]); 
   const lower = char.toLowerCase();
 
   if (lower === "m" || lower === "n") {
