@@ -9,9 +9,8 @@
 export function transformarCadena(texto: string): string {
   let resultado = "";
     // Escribir tu código aquí
-    
 for (let i = 0; i < texto.length; i++) {
-  const char = String(texto[i]); 
+  const char = texto[i] || "";  // asegura que siempre sea string
   const lower = char.toLowerCase();
 
   if (lower === "m" || lower === "n") {
@@ -24,6 +23,7 @@ for (let i = 0; i < texto.length; i++) {
     resultado += char;
   }
 }
+
 
   return resultado;
 }
