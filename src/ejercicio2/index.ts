@@ -6,42 +6,37 @@
  * - letras m y n → "*"
  */
 
-export function transformarCadena(texto: string): string {
-  let resultado = "";
     // Escribir tu código aquí
-    // Laboratorio 2 — Transformar cadena de texto
-    //
-function transformarCadena(texto: string): string {
+   export function transformarCadena(texto: string): string {
+  let transformado = "";
 
-  let resultado = "";
-  const vocales = "aeiou";
-// Recorrer cada carácter en la cadena de texto
-  for (const c of texto) {
-    // Convertir a minúscula para simplificar la comparación
-    const char = c.toLowerCase();
-// Verificar el tipo de carácter y transformar según las reglas
-    if (char === "m" || char === "n") {
-      // Letras m y n
-      resultado += "*";
-      // Vocales
-    } else if (vocales.includes(char)) {
-      // Agregar "(" para vocales
-      resultado += "(";
-      // Consonantes
-    } else if (char >= "a" && char <= "z") {
-      // Agregar ")" para consonantes
-      resultado += ")";
-      // Otros caracteres (espacios, puntuación, etc.)
+  for (let i = 0; i < texto.length; i++) {
+    const char = texto[i]!;
+    const caracterEnMinuscula = char.toLowerCase();
+    const esLetra = caracterEnMinuscula >= "a" && caracterEnMinuscula <= "z";
+
+    if (!esLetra) {
+      transformado += char;
     } else {
-      /// Agregar el carácter sin cambios
-      resultado += c;
+      if (caracterEnMinuscula === "m" || caracterEnMinuscula === "n") {
+        transformado += "*";
+      } else if (
+        caracterEnMinuscula === "a" ||
+        caracterEnMinuscula === "e" ||
+        caracterEnMinuscula === "i" ||
+        caracterEnMinuscula === "o" ||
+        caracterEnMinuscula === "u"
+      ) {
+        transformado += "(";
+      } else {
+        transformado += ")";
+      }
     }
   }
 
-  return resultado;
-  // Ejemplo de uso
+  return transformado;
 }
-console.log(transformarCadena("Manzana")); // Output: "*(*)**)"
 
-  return resultado;
-}
+console.log(transformarCadena("Hola Mundo"));
+console.log(transformarCadena("JavaScript"));
+console.log(transformarCadena("Programacion 2024"));
