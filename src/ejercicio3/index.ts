@@ -3,18 +3,13 @@
  * Dada una lista de 15 números,
  * hallar la suma más alta posible tomando solo 5 números.
  */
+const listaOriginal: number[] = [2, 11, 5, 8, 20, 3, 7, 15, 1, 9, 4, 6, 14, 10, 12];
+const listaOrdenada: number[] = [...listaOriginal].sort((a, b) => b - a); 
+const top5Numeros = listaOrdenada.slice(0, 5);
+const sumaMaxima = top5Numeros.reduce((acumulador, numeroActual) => {
+  return acumulador + numeroActual;}, 0);
 
 
 
-export function sumaMaximaCincoNumeros(lista: number[]): number {
-    let suma = 0;
-
-    // Escribir tu código aquí
-  
-
-  return suma;
-}
-
-console.log(
-  sumaMaximaCincoNumeros([7,2,5,4,9,0,13,54,12,10,111,3,19,6,15]) //212
-); 
+console.log("los 5 números mayores son: ", top5Numeros);
+console.log("la suma máxima es: ", sumaMaxima);
