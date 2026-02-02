@@ -11,3 +11,4 @@ export function productoExceptoActual(nums: number[]): number[] {
     
     return result;
 }
+//cambios
